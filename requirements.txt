@@ -1,0 +1,6 @@
+flask-sqlalchemy
+flask-bcrypt
+flask-security
+sqlalchemy
+DateTime
+flask-login

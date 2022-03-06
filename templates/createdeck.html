@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add Card</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Deck Name" name="deckname" value="{{request.form.deckname}}">
+        <input type="text" placeholder="Front" name="front" value="{{request.form.front }}">
+        <input type="text" placeholder="Back" name="back" value="{{request.form.back }}">
+        <input class="btn btn-default" type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

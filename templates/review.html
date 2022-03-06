@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale = 1">
+        <title> {{ Deck_name }} </title>
+        <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+        body{
+        background: #121212;
+        }
+    
+
+    .maincontainer{
+      position: absolute;
+      width: 250px;
+      height: 320px;
+      background: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    
+    }
+    
+  
+    .thecard{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      transform-style: preserve-3d;
+      transition: all 8s ease;
+    }
+    
+ 
+    .thecard:hover{
+      transform: rotateY(180deg);
+    }
+    
+ 
+     .thefront{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      background: #404040;
+      color: #fff;
+    }
+    
+
+    .theback{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      background: #fff ;
+      color: #2c3e50;
+      text-align: center;
+      transform: rotateY(180deg);
+    }
+    
+    .thefront h1, .theback h1{
+      font-family: 'zilla slab', sans-serif;
+      padding: 30px;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+    }
+    
+    .thefront p, .theback p{
+      font-family: 'zilla slab', sans-serif;
+      padding: 30px;
+      font-weight: normal;
+      font-size: 20px;
+      text-align: center;
+      
+    }
+        </style>
+      </head>
+    
+      <body>
+        <div class="maincontainer">
+    
+          <div class="thecard">
+    
+            <div class="thefront"><h1> {{ Deck_name }} </h1><p>{{ front }}</p><p>(Hover to rotate)</p> </div>
+    
+            <div class="theback"><h1>{{ front }}</h1><p>{{ back }}</p>
+              <br><br>
+            
+              <div class="d-flex flex-row align-items-center justify-content-around">
+            
+                <!-- <a href="https://FlashCardApplication.muskanjindal2.repl.co/dashboard/{{User_id}}/{{Deck_id}}/{{card}}/5" class="btn btn-success " >Easy</a>
+                <a href="https://FlashCardApplication.muskanjindal2.repl.co/dashboard/{{User_id}}/{{Deck_id}}/{{card}}/3" class="btn btn-warning" >Medium</a>
+                <a href="https://FlashCardApplication.muskanjindal2.repl.co/dashboard/{{User_id}}/{{Deck_id}}/{{card}}/1" class="btn btn-danger">Hard</a> -->
+                <a href="/dashboard/{{Deck_id}}/{{card}}/5" class="btn btn-success " >Easy</a>
+                <a href="/dashboard/{{Deck_id}}/{{card}}/3" class="btn btn-warning" >Medium</a>
+                <a href="/dashboard/{{Deck_id}}/{{card}}/1" class="btn btn-danger">Hard</a>
+
+              </div>
+    
+          </div>
+        </div>
+    
+      </body>
+    </html>
